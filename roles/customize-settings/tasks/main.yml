@@ -11,9 +11,19 @@
 - name: 
   ansible.builtin.file:
     path: ~/Pictures/Wallpapers
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: '0644'
+    owner: "{{ lookup('env', 'USER') }}"
+    group: "{{ lookup('env', 'USER') }}"
+    mode: '0755'
 
-- name: "clone wallpapers"
-  shell: git clone https://github.com/BitterSweetcandyshop/wallpapers ~/Pictures/Wallpapers/UnixPorn
+- name: get wallpapers
+  ansible.builtin.git:
+    repo: https://github.com/BitterSweetcandyshop/wallpapers.git
+    dest: ~/Pictures/Wallpapers
+
+
+- name: "change icons"
+  shell: gsettings set org.gnome.desktop.interface icon-theme 'Skeuowaita'
+
+- name: "change wallpaper"
+  shell: gsettings get org.gnome.desktop.background picture-uri 'file:///var/home/"{{ lookup('env', 'USER') }}"/Pictures/Wallpapers/unix_sorted/anime/jojo/VmmXijc-64388.png'
+
