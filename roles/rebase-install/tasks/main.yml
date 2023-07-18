@@ -1,0 +1,7 @@
+---
+- name: "rebase to ublue"
+  shell: rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bluefin:latest
+  become: true
+  become_method: sudo
+
+
