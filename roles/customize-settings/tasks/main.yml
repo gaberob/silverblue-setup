@@ -23,9 +23,10 @@
 - name: get themes
   ansible.builtin.git:
     repo: https://github.com/vinceliuice/Colloid-gtk-theme.git
+    dest: ~/Colloid-gtk-theme 
 
 - name: install themes
-  shell: "~/Colloid-gtk-theme/install.sh -t all -c all -l"
+  shell: "~/Colloid-gtk-theme/install.sh -t all -l"
 
 - name: "change icons"
   shell: gsettings set org.gnome.desktop.interface icon-theme 'Skeuowaita'
