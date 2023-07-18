@@ -5,7 +5,7 @@
   roles:
     - role: "roles/install-rpm"
     - role: "roles/install-flatpak" 
-    - role: "roles/import-dconf" 
+    #- role: "roles/import-dconf" 
     - role: gantsign.oh-my-zsh
       users: 
         - username: "{{ ansible_user_id }}"

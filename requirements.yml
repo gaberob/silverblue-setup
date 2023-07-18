@@ -1,1 +1,3 @@
-- src: gantsign.oh-my-zsh
+# ansible-galaxy collection install community.general
+- src: community.general.flatpak
+- src: community.general.rpm_ostree_pkg
