@@ -28,6 +28,13 @@
 - name: install themes
   shell: "~/Colloid-gtk-theme/install.sh -t all -l"
 
+- name: change theme
+  shell: gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Orange-Dark"
+
+- name: flatpak override
+  shell: flatpak override --filesystem=$HOME/.themes
+  become: yes
+
 - name: "change icons"
   shell: gsettings set org.gnome.desktop.interface icon-theme 'Skeuowaita'
 
