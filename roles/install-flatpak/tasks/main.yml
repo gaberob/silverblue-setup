@@ -1,0 +1,9 @@
+---
+- name: Install flatpaks
+  community.general.flatpak:
+    name:
+      - md.obsidian.Obsidian
+      - com.belmoussaoui.Authenticator
+      - com.raggesilver.BlackBox
+
+
