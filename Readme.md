@@ -8,12 +8,12 @@
 * Make sure we have a sudo token (sudo whoami)
 * ansible-playbook main.yml
 
-# What this script does
+# What this playbook does
 * Layers various packages on the host via rpm-ostree
 * Installs flatpaks I use
 * Imports my dconf keyboard shortcuts
 
 
-# What this script will do 
+# What this playbook will do 
 * Dotfiles?
 * Additional customization?
