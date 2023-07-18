@@ -5,4 +5,15 @@
 - name: "load gnome tiling assistant keybindings"
   shell: dconf load / < "{{ role_path }}/files/tiling-assistant.dconf"
 
+- name: "install icons"
+  shell: git clone --depth 1 https://github.com/Frostbitten-jello/Skeuowaita.git ~/.local/share/icons/Skeuowaita
 
+- name: 
+  ansible.builtin.file:
+    path: ~/Pictures/Wallpapers
+    owner: {{ ansible_user }}
+    group: {{ ansible_user }} 
+    mode: '0644'
+
+- name: "clone wallpapers"
+  shell: git clone https://github.com/BitterSweetcandyshop/wallpapers ~/Pictures/Wallpapers/UnixPorn
