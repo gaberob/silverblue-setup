@@ -1,8 +1,0 @@
----
-- include: apt-stuff.yml
-- include: go-tools.yml
-- include: github-repos.yml
-- include: python-tools.yml
-- include: gem-tools.yml
-- include: resolution-script.yml
-- include: cargo-tools.yml

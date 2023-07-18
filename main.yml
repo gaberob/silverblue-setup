@@ -1,22 +1,11 @@
 ---
-- name: "Customizing Kali"
+- name: "Customizing Silverblue"
   hosts: localhost
   connection: local
   roles:
-    - role: "roles/install-tools"
-    - role: "roles/configure-tmux"
-    - role: "roles/customize-terminal"
-    - role: "roles/customize-browser"
-    - role: "roles/configure-logging"
-    - role: gantsign.visual-studio-code
-      users:
-        - username: "{{ ansible_user_id }}" 
-          visual_studio_code_extensions:
-            - streetsidesoftware.code-spell-checker
-            - ms-python.python
-            - DEVSENSE.phptools-vscode
-            - GitHub.copilot-nightly
-            - snyk-security.snyk-vulnerability-scanner
+    - role: "roles/install-rpm"
+    - role: "roles/install-flatpak" 
+    - role: "roles/import-dconf" 
     - role: gantsign.oh-my-zsh
       users: 
         - username: "{{ ansible_user_id }}"
