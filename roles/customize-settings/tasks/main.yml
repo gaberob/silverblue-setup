@@ -24,6 +24,15 @@
 - name: "change icons"
   shell: gsettings set org.gnome.desktop.interface icon-theme 'Skeuowaita'
 
-- name: "change wallpaper"
-  shell: gsettings get org.gnome.desktop.background picture-uri 'file:///var/home/"{{ lookup('env', 'USER') }}"/Pictures/Wallpapers/unix_sorted/anime/jojo/VmmXijc-64388.png'
+- name: Install bottle psutil package, dependency for setting bg
+  ansible.builtin.pip:
+    name: psutil
 
+- name: Set GNOME Wallpaper
+  become_user: me
+  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///var/home/gabe/Pictures/Wallpapers/unix_sorted/anime/jojo/VmmXijc-64388.png'"
+
+
+- name: Set GNOME Wallpaper for dark mode
+  become_user: me
+  dconf: key="/org/gnome/desktop/background/picture-uri-dark" value="'file:///var/home/gabe/Pictures/Wallpapers/unix_sorted/anime/jojo/VmmXijc-64388.png'"
