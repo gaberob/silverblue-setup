@@ -6,14 +6,4 @@
     - role: "roles/install-rpm"
     - role: "roles/install-flatpak" 
     #- role: "roles/import-dconf" 
-    - role: gantsign.oh-my-zsh
-      users: 
-        - username: "{{ ansible_user_id }}"
-          oh_my_zsh:
-            theme: gallois
-            plugins:
-              - git
-            update_mode: reminder
-            update_frequency: 3
-            write_zshrc: false
          

@@ -2,8 +2,39 @@
 - name: Install flatpaks
   community.general.flatpak:
     name:
-      - md.obsidian.Obsidian
+      - app.drey.Warp
       - com.belmoussaoui.Authenticator
+      - com.belmoussaoui.Decoder
+      - com.brave.Browser
+      - com.discordapp.Discord
+      - com.github.huluti.Curtail
+      - com.github.liferooter.textpieces
+      - com.github.tchx84.Flatseal
+      - com.mattjakeman.ExtensionManager
       - com.raggesilver.BlackBox
-
+      - com.spotify.Client
+      - com.valvesoftware.Steam
+      - fr.romainvigier.MetadataCleaner
+      - info.febvre.Komikku
+      - io.github.seadve.Kooha
+      - io.github.vikdevelop.SaveDesktop
+      - md.obsidian.Obsidian
+      - nl.g4d.Girens
+      - nz.mega.MEGAsync
+      - org.cryptomator.Cryptomator
+      - org.freedesktop.Platform.ffmpeg-full
+      - org.freedesktop.Platform.openh264
+      - org.gimp.GIMP
+      - org.gnome.Boxes
+      - org.gnome.DejaDup
+      - org.gnome.Podcasts
+      - org.gnome.gitlab.YaLTeR.VideoTrimmer
+      - org.gnome.gitlab.somas.Apostrophe
+      - org.libreoffice.LibreOffice
+      - org.mozilla.firefox
+      - org.nickvision.money
+      - org.nickvision.tubeconverter
+      - org.qbittorrent.qBittorrent
+      - org.remmina.Remmina
+      - org.zaproxy.ZAP
 
