@@ -26,10 +26,10 @@
     dest: ~/Colloid-gtk-theme 
 
 - name: install themes
-  shell: "~/Colloid-gtk-theme/install.sh -t all -l"
+  shell: "~/Colloid-gtk-theme/install.sh -t all -l --tweaks gruvbox"
 
 - name: change theme
-  shell: gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Orange-Dark"
+  shell: gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Dark-Gruvbox"
 
 - name: flatpak override
   shell: flatpak override --filesystem=$HOME/.themes
