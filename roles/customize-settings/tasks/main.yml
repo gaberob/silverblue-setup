@@ -20,6 +20,12 @@
     repo: https://github.com/BitterSweetcandyshop/wallpapers.git
     dest: ~/Pictures/Wallpapers
 
+- name: get themes
+  ansible.builtin.git:
+    repo: https://github.com/vinceliuice/Colloid-gtk-theme.git
+
+- name: install themes
+  shell: "~/Colloid-gtk-theme/install.sh -t all -c all -l"
 
 - name: "change icons"
   shell: gsettings set org.gnome.desktop.interface icon-theme 'Skeuowaita'
