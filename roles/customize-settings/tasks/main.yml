@@ -69,12 +69,12 @@
 
 - name: Set GNOME Wallpaper for dark mode
   become_user: me
-  dconf: key="/org/gnome/desktop/background/picture-uri-dark" value="'file:///var/home/gabe/Pictures/Wallpapers/town-city/fake/wallhaven-q2zy1q-CF211.png''"
+  dconf: key="/org/gnome/desktop/background/picture-uri-dark" value="'file:///var/home/gabe/Pictures/Wallpapers/town-city/fake/wallhaven-q2zy1q-CF211.png'"
 
 
 - name: Change login shell
   ansible.builtin.user:
-    name: gabe
+    name: "{{ lookup('env', 'USER') }}"
     shell: /bin/zsh
   become: yes
 
