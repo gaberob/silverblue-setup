@@ -8,12 +8,18 @@
 * Make sure we have a sudo token (sudo whoami)
 * ansible-playbook main.yml
 
+# post install steps
+* install extensions from extension manager
+ * vitals
+ * tiling-assistant
+
 # What this playbook does
 * Layers various packages on the host via rpm-ostree
 * Installs flatpaks I use
 * Imports my dconf keyboard shortcuts
+* installs my dotfiles using chezmoi
+* installs gtk theming and icons
 
 
 # What this playbook will do 
-* Dotfiles?
-* Additional customization?
+* Additional customization and change shell (try out fish)
