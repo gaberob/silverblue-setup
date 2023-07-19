@@ -1,5 +1,5 @@
 ---
-########- include: create-distrobox.yml
+- include: create-distrobox.yml
 
 - name: deploy dot files
   shell: distrobox-enter --name ubuntu -- 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply gaberob --force'
