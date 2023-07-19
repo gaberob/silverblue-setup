@@ -1,8 +1,5 @@
 ---
 
-- name: setup a new distrobox container
-  shell: distrobox-create --image ubuntu:22.04 --name ubuntu-toolbox --yes -ap chezmoi
-
 - name: deploy dot files
-  shell: distrobox-enter --name ubuntu-toolbox -- chezmoi init --apply gaberob 
+  shell: distrobox-enter --name ubuntu-toolbox -- sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply gaberob
 
