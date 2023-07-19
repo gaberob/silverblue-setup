@@ -50,7 +50,6 @@
 
 - name: flatpak override
   shell: flatpak override --filesystem=$HOME/.themes
-  become: yes
 
 - name: flatpak override
   shell: flatpak override --user --filesystem=xdg-config/gtk-4.0
