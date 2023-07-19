@@ -26,6 +26,10 @@
     repo: https://github.com/vinceliuice/Colloid-gtk-theme.git
     dest: ~/Colloid-gtk-theme 
 
+- name: prefer dark mode
+  shell: "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
+
+
 - name: install themes
   shell: "~/Colloid-gtk-theme/install.sh -t all -l --tweaks gruvbox"
 
