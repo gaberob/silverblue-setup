@@ -31,7 +31,19 @@
 
 
 - name: install themes
-  shell: "~/Colloid-gtk-theme/install.sh -t all -l --tweaks gruvbox"
+  shell: "~/Colloid-gtk-theme/install.sh -t all --tweaks gruvbox"
+
+
+- name: Recursively remove directory
+  ansible.builtin.file:
+    path: ~/.config/gtk-4.0
+    state: absent
+
+- name: copy gtk-4.0 config
+  copy:
+    src: ~/.themes/Colloid-Dark-Gruvbox/gtk-4.0
+    dest: ~/.config/
+
 
 - name: change theme
   shell: gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Dark-Gruvbox"
