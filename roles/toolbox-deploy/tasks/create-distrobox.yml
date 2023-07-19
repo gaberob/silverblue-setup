@@ -1,0 +1,5 @@
+---
+
+- name: create distrobox
+  shell: distrobox-create --name ubuntu --image ubuntu:latest -ap chezmoi
+

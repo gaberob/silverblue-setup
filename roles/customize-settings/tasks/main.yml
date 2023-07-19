@@ -52,6 +52,9 @@
   shell: flatpak override --filesystem=$HOME/.themes
   become: yes
 
+- name: flatpak override
+  shell: flatpak override --user --filesystem=xdg-config/gtk-4.0
+
 - name: "change icons"
   shell: gsettings set org.gnome.desktop.interface icon-theme 'Skeuowaita'
 
