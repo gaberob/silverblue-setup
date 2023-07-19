@@ -10,8 +10,8 @@
 
 # post install steps
 * install extensions from extension manager
- * vitals
- * tiling-assistant
+   * vitals
+   * tiling-assistant
 
 # What this playbook does
 * Layers various packages on the host via rpm-ostree
@@ -21,5 +21,7 @@
 * installs gtk theming and icons
 
 
-# What this playbook will do 
+# TODO
 * Additional customization and change shell (try out fish)
+* wallpaper
+* more robust toolbox
