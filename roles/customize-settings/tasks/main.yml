@@ -26,6 +26,10 @@
     repo: https://github.com/vinceliuice/Colloid-gtk-theme.git
     dest: ~/Colloid-gtk-theme 
 
+- name: Install sassc python package
+  ansible.builtin.pip:
+    name: sassc
+
 - name: install themes
   shell: "~/Colloid-gtk-theme/install.sh -t all -l --tweaks gruvbox"
 
