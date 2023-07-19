@@ -22,7 +22,7 @@
       - nl.g4d.Girens
       - nz.mega.MEGAsync
       - org.cryptomator.Cryptomator
-      - rg.freedesktop.Platform.ffmpeg-full/x86_64/22.08
+      - org.freedesktop.Platform.ffmpeg-full/x86_64/22.08
       - org.freedesktop.Platform.openh264
       - org.gimp.GIMP
       - org.gnome.Boxes
