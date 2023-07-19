@@ -78,4 +78,11 @@
     shell: /bin/zsh
   become: yes
 
+- name: install oh-my-zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+- name: move real .zshrc back
+    ansible.builtin.copy:
+    src: ~/.zshrc.pre-oh-my-zsh
+    dest: ~/.zshrc
 
