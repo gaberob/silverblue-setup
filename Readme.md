@@ -1,7 +1,7 @@
 
 # Instructions
 * This is really meant to be used on something like [ublue](https://universal-blue.org/), that already has a lot of QoL improvements built on top of silverblue, so start with a fresh install of one of those images, preferably the main gnome or bluefin one.
-* rpm-ostree install ansible
+* rpm-ostree install ansible sassc
 * reboot
 * Clone and enter the repo (git clone)
 * ansible-galaxy collection install community.general
