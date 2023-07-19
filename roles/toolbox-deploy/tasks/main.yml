@@ -1,5 +1,5 @@
 ---
 
 - name: deploy dot files
-  shell: distrobox-enter --name ubuntu-toolbox -- sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply gaberob
+  shell: distrobox-enter --name ubuntu -- 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply gaberob --force'
 
