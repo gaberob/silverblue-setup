@@ -8,4 +8,15 @@
     - role: "roles/install-flatpak" 
     - role: "roles/customize-settings" 
     - role: "roles/toolbox-deploy" 
-         
+    - role: gantsign.oh-my-zsh
+      users:
+        - username: "{{ lookup('env', 'USER') }}"
+          oh_my_zsh:
+            install: true
+            theme: gallois
+            plugins:
+              - git
+            update_mode: reminder
+            update_frequency: 3
+            write_zshrc: false
+
