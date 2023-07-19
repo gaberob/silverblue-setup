@@ -11,6 +11,7 @@
 - name: 
   ansible.builtin.file:
     path: ~/Pictures/Wallpapers
+    state: directory
     owner: "{{ lookup('env', 'USER') }}"
     group: "{{ lookup('env', 'USER') }}"
     mode: '0755'
