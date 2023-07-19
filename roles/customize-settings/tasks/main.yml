@@ -81,4 +81,5 @@
 - name: install oh-my-zsh
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-
+- name: deploy dots
+  shell: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply gaberob
